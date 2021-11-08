@@ -4,17 +4,10 @@ function runProgram(input) {
    for (var i = 1; i <=input; i++){
 arr.push(i)
    }
-//    console.log(arr);
-     
     let rs=[]
- 
-    
-   fun(arr,rs,0)
-    
+   fun(arr,rs,0) 
 }
-
 function fun(a,rs,l) {
-    
     if(rs.length==0){
         console.log(" ");
     }
@@ -30,8 +23,6 @@ for (let i = l; i <a.length; i++) {
         rs.pop();
     }
     return
-    
-
 }
     if (process.env.USERNAME === 'Rohan') {
         runProgram(`3`);

@@ -28,7 +28,8 @@ function check(arr,right,k){
         if (right == 0)
            { return false;}
         if (arr[right-1]>k){return check(arr, right - 1, k);}
-        return (check(arr, right - 1, k) || check(arr, right - 1, k - arr[right - 1]));
+        return (check(arr, right - 1, k)
+         || check(arr, right - 1, k - arr[right - 1]));
 }
 
 let flag = false 

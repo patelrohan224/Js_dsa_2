@@ -15,11 +15,10 @@ function  fun(a,i,j,ans) {
    
         if (i>j){ return ans}
         let mid = Math.floor((i + j)/2);
-        return ans+ a.charAt(mid) + fun(a,i,mid-1,ans) + fun(a,mid+1,j,ans);
-        
+        return ans+ a.charAt(mid)
+         + fun(a,i,mid-1,ans) 
+         + fun(a,mid+1,j,ans);
 }
-
-
     if (process.env.USERNAME === 'Rohan') {
         runProgram(`3
         3

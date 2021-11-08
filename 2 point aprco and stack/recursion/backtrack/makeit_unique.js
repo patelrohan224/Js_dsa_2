@@ -1,28 +1,29 @@
 function runProgram(input) {
-    input =input.trim().split("\n")
-    input = input[1].trim().split(" ")
-   input =input.join("")
-    let rs=""
-   fun(input,rs)   
+    let len=input.trim().split(" ")
+    fun(len.join(""))
 }
-function fun(a,rs) {
-  if(a.length==0 )
-  {
-      console.log(rs.split("").join(" "));
-      return 
-  }
-  for (let i = 0; i <a.length ; i++) {
-      let c=a[i]
-    let l=a.substring(0,i)
-    let r=a.substring(i+1)
   
-  let ss=l+r
-    fun(ss,rs+c)
-  }
+function fun(arr){
+    let obj={}
+for (let i=0; i<arr.length; i++){
+    if(obj[arr[i]]==undefined){
+        obj[arr[i]]=1
+    }else{
+        obj[arr[i]]=obj[arr[i]]+1
+    }
 }
+let ar=[]
+for (const key in obj) {
+      if(key%2!==0){
+        ar.push(key)
+      }
+        
+    }
+    console.log(ar.join(""));
+}
+
     if (process.env.USERNAME === 'Rohan') {
-        runProgram(`3
-        1 2 3`);
+        runProgram(`my name is ankush`);
         } else {
         process.stdin.resume();
         process.stdin.setEncoding("ascii");
