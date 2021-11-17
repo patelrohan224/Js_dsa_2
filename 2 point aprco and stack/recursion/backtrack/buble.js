@@ -1,16 +1,11 @@
 function runProgram(input) {
-    input=input.trim().split("\n")
-    
-       let len=input[1].trim().split(" ").map(Number)
-    
-       let l=len.length
-
+    input=input.trim().split("\n")    
+      let len=input[1].trim().split(" ").map(Number)    
+      let l=len.length
       bubble(len,l)
       console.log(len.join(" "));
-
     }
-
-function bubble (arr,l){
+function bubble(arr,l){
     if(l==1){
       return arr;
     }

@@ -1,10 +1,9 @@
 function runProgram(input) {
-    input=input.trim().split(" ").map(Number)
+   input=input.trim().split(" ").map(Number)
    let l1=input[0]
    let l2=input[1]
    console.log(fib(l2,l1).toFixed(4));
-   
-       }
+}
     
        function fib(l1,l2){
            if(l2==0){

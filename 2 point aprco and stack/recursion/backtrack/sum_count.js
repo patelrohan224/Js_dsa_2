@@ -1,16 +1,13 @@
 function runProgram(input) {
   input=input.trim().split("\n")
-      let ss=input[0].trim().split(" ").map(Number)
-  
-     let len=input[1].trim().split(" ").map(Number)
-  
+  let ss=input[0].trim().split(" ").map(Number)
+  let len=input[1].trim().split(" ").map(Number)
   let ar=[]
-      let l=0
-      count=0
-    
-    fun(len,ar,l,ss[1])
-     console.log(count)
-  }
+  let l=0
+  count=0
+  fun(len,ar,l,ss[1])
+  console.log(count)
+}
   let count=0
   function fun(str,stack,l,k) {
      

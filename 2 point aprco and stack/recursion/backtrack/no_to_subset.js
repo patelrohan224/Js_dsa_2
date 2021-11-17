@@ -11,13 +11,12 @@ function fun(a,rs,l) {
     if(rs.length==0){
         console.log(" ");
     }
-   
-    if (rs.length>0) {
+    if(rs.length>0){
         console.log(rs.join(" "));
     }
     if (l==a.length){
     return;}
-for (let i = l; i <a.length; i++) {
+    for (let i = l; i <a.length; i++) {
         rs.push(a[i])
         fun(a,rs,i+1);
         rs.pop();

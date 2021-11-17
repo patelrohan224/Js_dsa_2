@@ -3,7 +3,6 @@ function runProgram(input) {
    for (var i = 1; i < input.length; i++) {
     let str=input[i].trim().split(" ").map(Number)
     let rs=[]
-    
     let sr=  fun(str[0],rs)
     console.log(sr.reverse().join(''))
    }    
@@ -12,7 +11,6 @@ function runProgram(input) {
 function fun(n,rs) {
   if(n==0)
   {return rs}
-  
   let op=Math.floor(n/2)
  rs.push(n%2)
  return fun(op,rs)

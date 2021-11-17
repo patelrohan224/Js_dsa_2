@@ -19,8 +19,7 @@ function fun(a,len,rs,l) {
             stack.add(rs.join(" "))
             console.log(rs.join(" "));
         }
-        if(stack.has(rs.join(" "))){
-           
+        if(stack.has(rs.join(" "))){     
         }else{
            rs=rs.map(Number).sort((a,b) =>{return(a-b)})
            stack.add(rs.join(" "))
