@@ -1,4 +1,4 @@
-function runProgram(input) {
+  function runProgram(input) {
     var  arr=input.split("\n")
    // console.log(arr);
     var testcase=Number(arr[0])
