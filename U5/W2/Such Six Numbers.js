@@ -1,44 +1,36 @@
 function runProgram(input) {
-    input=input.trim().split("\n")
-    for (let i = 1; i < input.length; i++) {
-        
-        let arr= input[i].trim().split(" ").map(Number)
-        let a= arr[0],b=arr[1],c=arr[2],k=arr[3]
+    input=input.trim().split(" ").map(Number)
+fun(input)  
     
-        // fun(a,b,c,k)
-        console.log( fun(a,b,c,k))
-    }
-   
 }
-
-function fun(a,b,c,k){
-    let rs=Number.MAX_VALUE
-
-    if(k<=c){
-        return -1
-    }
-
-    let e=k-c
-    let s=0
-
-    while(s<=e){ 
-         let m = Math.floor((s + e) / 2);
-        if((a*m*m+(b*m)>(k-c))){
-            rs=Math.min(rs,m)
-            e=m-1
+function fun(array){
+    array.sort()
+let rs
+    for (let i = 0; i < array.length; i++) {
+        for (let j = 0; j < array.length; j++) {
+            for (let k = 0; k < array.length; k++) {
+                  rs=array[i]*array[j]+array[k]
+            }
+            
         }
-        else if((a*m*m+(b*m)<(k-c)))
-        {
-            s=m+1
-        }else{
-            return m-1
-        }
+        
     }
-    return rs
+    let count=0
+    for (let i = 0; i < array.length; i++) {
+        for (let j = 0; j < array.length; j++) {
+            for (let k = 0; k < array.length; k++) {
+                  if(array[i]*array[j]+array[k]===rs){
+                    count++
+                  }
+            }
+            
+        }
+        
+    }
+    console.log(count);
 }
     if (process.env.USERNAME === 'Rohan') {
-        runProgram(`1
-        3 5 7 10`);
+        runProgram(`3 5 7 10`);
         } else {
         process.stdin.resume();
         process.stdin.setEncoding("ascii");
