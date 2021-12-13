@@ -16,7 +16,7 @@ function runProgram(input) {
         console.log("Party");
     }else{
         console.log("Sad");
-    }
+    } 
     }
 
 
