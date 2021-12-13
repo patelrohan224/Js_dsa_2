@@ -24,6 +24,7 @@ function runProgram(input) {
 //    return Math.max(string(st1,st2,l1,l2-1,dp),string(st1,st2,l1-1,l2,dp))
 //    
 // }
+
 function string(st1,st2,l1,l2,dp) {
     for (let i = 0; i <=l1; i++) {
         for (let j = 0; j <= l2; j++) {
@@ -38,7 +39,7 @@ function string(st1,st2,l1,l2,dp) {
             }
         }   
     }    
-    }
+}
     if (process.env.USERNAME === 'Rohan') {
         runProgram(`ghajf
         mnmaqq`);

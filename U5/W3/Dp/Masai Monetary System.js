@@ -7,7 +7,7 @@ function runProgram(input) {
         let set = new Map();
       
         // console.log(dp);
-        console.log(   fun(coin[0],set))
+        console.log(fun(coin[0],set))
     }
 }
 function fun(coin,set) {
