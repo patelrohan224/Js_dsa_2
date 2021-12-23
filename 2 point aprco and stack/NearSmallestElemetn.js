@@ -3,41 +3,21 @@
     let ar=input[1].trim().split(" ").map(Number)
     fun(ar)
     }
-    let ar=[]
-let top=-1
-function push(str) {
-  ar[++top]=str
-}
-function pop() {
-  if(top==-1){
-    return "Empty"}
-    let ans=ar[top]
-    top--
-    return ans
-  
-}
-function peek() {
-  if(top==-1){
-    return "Empty"}
-    return ar[top]
-}
-function empty() {
-  return top==-1
-}
     function fun(array) {
+      let ar=[]
       let rs=[]
       let x=-1
        for (let i = 0; i < array.length; i++) { 
-        while(empty()!==true && array[i]<=ar[top]){
-          pop()
+        while(ar.length!==0 && array[i]<=ar[ar.length-1]){
+          ar.pop()
         }
-        if(empty()==true){
+        if(ar.length==0){
           rs.push("-1")
           
         }else{
-          rs.push(ar[top])
+          rs.push(ar[ar.length-1])
         }
-        push(array[i])
+        ar.push(array[i])
     }
     console.log(rs.join(" "));
   }
