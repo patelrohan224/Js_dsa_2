@@ -10,7 +10,7 @@ function authorize(permissionRoles) {
         })
 
         // if not then throw an error
-        if (! allowed) return res.status(403).send({message: "You are not allowed to access this page."});
+        if (! allowed) return res.status(403).send({message: "You are not allowed to access this page.(role problame)"});
 
         // if yes then he is allowed
         return next();

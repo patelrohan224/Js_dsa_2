@@ -12,7 +12,6 @@ router.get("/new", function(req, res) {
 })
 
 router.get("/", authenticate, authorize(["seller", "admin"]), async function(req, res) {
-   
     const user = req.user
     delete user.password
     let products

@@ -1,3 +1,4 @@
+
 function runProgram(input) {
    var  arr=input.split("\n")
    console.log(arr);
