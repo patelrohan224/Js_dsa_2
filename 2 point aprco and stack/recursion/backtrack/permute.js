@@ -12,11 +12,11 @@ function fun(a,rs){
       return 
   }
   for (let i = 0; i <a.length ; i++){
-  let c=a[i]
-  let l=a.substring(0,i)
-  let r=a.substring(i+1)
-  let ss=l+r
-  fun(ss,rs+c)
+    let c=a[i]
+    let l=a.substring(0,i)
+    let r=a.substring(i+1)
+    let ss=l+r
+    fun(ss,rs+c)
   }
 }
 if (process.env.USERNAME === 'Rohan') {
