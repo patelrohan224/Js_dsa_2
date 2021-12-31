@@ -3,26 +3,20 @@ function runProgram(input) {
     let key= input[0].trim().split(" ").map(Number)
     
     let arr= input[1].trim().split(" ").map(Number).sort((a,b)=>{return a-b})
-    // console.log('arr:', arr)
     let rs=0
     let result=0
         for (let i = 0; i < arr.length; i++) {
-            if((rs+=arr[i])<=key[2]){
+            if((rs+=arr[i])<=key[1]){
             result++
            }
         }
-        
-    if(result>=key[1]){
-        console.log("Party");
-    }else{
-        console.log("Sad");
-    } 
+    console.log(result);
     }
 
 
     if (process.env.USERNAME === 'Rohan') {
-        runProgram(`5 3 24
-        6 4 21 20 13`);
+        runProgram(`4 10
+        5 4 2 4`);
         } else {
         process.stdin.resume();
         process.stdin.setEncoding("ascii");
