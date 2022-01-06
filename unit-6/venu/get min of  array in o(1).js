@@ -23,11 +23,16 @@ function deleTe(){
     return ar.pop()
 }
 
-add(10)
 add(5)
-add(2)
-add(6)
+add(7)
+add(3)
+add(8)
+add(10)
 // console.log(ar)
+console.log(ar);
+console.log(current)
 deleTe()
+deleTe()
+console.log(current)
 deleTe()
 console.log(current)
