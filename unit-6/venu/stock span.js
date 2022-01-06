@@ -10,22 +10,23 @@ function runProgram(input) {
     }
     
     function fun(array) {
-        // console.log('array:', array)
         let rs=[]
         let s=[]
-        for (let i = array.length-1; i >=0; i--) {
-            
-            while(rs.length!==0 && array[i]>=rs[rs.length-1]){
+        // rs.push([1,array[0]])
+        // console.log(rs);
+        for (let i=0; i<array.length; i++){
+            while(rs.length!==0 && array[i]>=array[rs[rs.length-1][0]]){
+              // console.log(array[i],rs);
                 rs.pop()
             }
             if(rs.length==0){
-              s.push("-1")
+              s.push(i+1)
             }else{
-               s.push(rs[rs.length-1])
+               s.push(i-rs[rs.length-1][0])
             }
-           rs.push(array[i])
+           rs.push([i,array[i]])
         }
-        console.log(s.reverse().join(" "));
+        console.log(s.join(" "));
     }
     if (process.env.USERNAME === 'Rohan') {
         runProgram(`1

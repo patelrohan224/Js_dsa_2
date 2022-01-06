@@ -1,36 +1,30 @@
 function runProgram(input) {
     input=input.trim().split("\n")
-    let ar=[]
-    for (let i = 2; i < input.length; i=i+2) {
-        let str=input[i].trim().split(" ").map(Number)
-        fun(str)
-        
+    let key= input[2].trim().split(" ").map(Number)
+    let arr= input[1].trim().split(" ").map(Number)
+    console.log(fun(arr,0,arr.length-1,key[0]));
     }
-  
+    function fun(ar,s,e,key) {  
+        if(s<=e){
+            let mid=s+Math.floor((e-s) / 2)
+            // console.log('mid:', mid)
+            if(ar[mid]===key){
+                return mid
+            }
+            if(ar[mid]>key){
+                return fun(ar,s,mid-1,key)
+            }else{
+                return fun(ar,mid+1,e,key)
+            }
+        }
+        return -1
     }
     
-    function fun(array) {
-        // console.log('array:', array)
-        let rs=[]
-        let s=[]
-        for (let i = array.length-1; i >=0; i--) {
-            
-            while(rs.length!==0 && array[i]>=rs[rs.length-1]){
-                rs.pop()
-            }
-            if(rs.length==0){
-              s.push("-1")
-            }else{
-               s.push(rs[rs.length-1])
-            }
-           rs.push(array[i])
-        }
-        console.log(s.reverse().join(" "));
-    }
+    
     if (process.env.USERNAME === 'Rohan') {
-        runProgram(`1
-        4
-        100 80 60 70 60 75 85`);
+        runProgram(`5
+        1 2 4 5 6
+        6`);
         } else {
         process.stdin.resume();
         process.stdin.setEncoding("ascii");
