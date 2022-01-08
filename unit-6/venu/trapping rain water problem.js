@@ -29,6 +29,7 @@ op=9
 // fun2(ar,7) 
 op=6
 function fun2(array,n){
+   
     let first=new Array(n)
     let second=new Array(n)
     // console.log(n,first.length);

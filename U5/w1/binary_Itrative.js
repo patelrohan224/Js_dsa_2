@@ -18,7 +18,7 @@ function runProgram(input) {
                 }
             }
             return -1
-      }
+    }
     if (process.env.USERNAME === 'Rohan') {
         runProgram(`6 5
         11 34 5 4 21 0`);
