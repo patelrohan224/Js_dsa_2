@@ -32,7 +32,7 @@ function runProgram(input) {
   
   if (process.env.USERNAME === 'Rohan') {
       runProgram(`2
-      2 4`);
+      1 2 3`);
       } else {
       process.stdin.resume();
       process.stdin.setEncoding("ascii");

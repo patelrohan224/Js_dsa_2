@@ -42,7 +42,7 @@ function lenn(array) {
    }
 }
 if (process.env.USERNAME === 'Rohan') {
-    runProgram(`aaaa`);
+    runProgram(`aaabccddd`);
     } else {
     process.stdin.resume();
     process.stdin.setEncoding("ascii");

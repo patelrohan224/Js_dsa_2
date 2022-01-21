@@ -11,8 +11,7 @@ function runProgram(input) {
     
    
     obj.sort((a,b)=>{return b[0]/b[1]-a[0]/a[1]})
-    
-    // console.log(obj);
+
     fun(obj,key[0])
 }
 function fun(obj,keyy){

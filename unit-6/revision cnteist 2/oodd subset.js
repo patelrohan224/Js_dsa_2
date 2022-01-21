@@ -1,33 +1,33 @@
 function runProgram(input) {
-    input=input.trim().split("\n")
-
-    for (let i = 1; i < input.length; i=i+2) {
-
-       var str=input[i+1].trim().split(" ").map(Number).sort((a,b)=>{return a-b})
-       let kap=input[i].trim().split(" ").map(Number)
-       fun(str,kap[1])
+    input=input.trim().split("\n")   
+    let array=input[1].trim().split(" ").map(Number)
+    fun(array,0,array.length,[])
+    console.log(count);
+}
+let count=0
+function fun(ar,l,h,rs){
+    if(rs.length>0){
+    let sum=0
+    for (let i = 0; i <rs.length; i++) {
+        sum+=rs[i]
+    }
+    if(sum%2!=0){
+        count++
+    }
+  
+    }
+     if(h==l){
+        return 
+    }
+        for (let i = l; i <h; i++) {
+            rs.push(ar[i])
+            fun(ar,i+1,h,rs)
+            rs.pop()
     }
 }
-function fun(ar,kap) {
-  let l=0
-  let h=ar.length-1
-  let c=0
-  while(l<=h){
-    c++
-    if((ar[l]+ar[h])<=kap){
-      l++  
-    }
-    h--
-  }
-  console.log(c)
-}
-
 if (process.env.USERNAME === 'Rohan') {
-    runProgram(`2
-    4 5
-    3 5 3 4
-    4 3
-    1 2 2 3`);
+    runProgram(`3
+    1 2 3`);
     } else {
     process.stdin.resume();
     process.stdin.setEncoding("ascii");

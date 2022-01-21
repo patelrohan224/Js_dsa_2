@@ -4,6 +4,7 @@ let target=2
 // Find the first Occurance of target in the given array
 // o(logn)
 // fun(ar,0,ar.length-1,target)
+// lowerBound(ar,0,ar.length-1,target)
 function fun(array,l,h,key){
     let rs=-1
     while (l<=h) {
@@ -21,10 +22,24 @@ function fun(array,l,h,key){
     console.log(rs);
     return rs
 }
+// function lowerBound(arr, s, e, key) {
+//     while (s < e) {
+//         let mid = (s + e) >> 1
+//         if (arr[mid] >= key) {
+//             e = mid
+//         } else {
+//             s = mid + 1
+//         }
+//     }
+
+//     console.log('s:', s)
+//     return s
+// }
 
 
 //Find the last Occurance of target in the given array
 // fun2(ar,0,ar.length-1,target)
+// UpperBound(ar,0,ar.length-1,target)
 function fun2(array,l,h,key){
     let rs=-1
     while (l<=h) {
@@ -42,6 +57,19 @@ function fun2(array,l,h,key){
     console.log(rs);
     return rs
 }
+
+// function UpperBound(arr, s, e, key) {
+//     while (s < e) {
+//         let mid = s + e >> 1
+//         if (arr[mid] <= key) {
+//             s = mid + 1
+//         } else {
+//             e = mid
+//         }
+//     }
+//     console.log('s:', s)
+//     return s
+// }
 
 // lower bound upper bound and ocurance
 // let l=fun(ar,0,ar.length-1,target)
@@ -91,7 +119,7 @@ function fun3(n,array,l,h) {
 // Find the floor and ceil of a element in a given array
 ar=[1,2,8,10,10,12,19,31]
 target=2.5
-fun4(target,ar,0,ar.length-1)
+// fun4(target,ar,0,ar.length-1)
 function fun4(key,ar,l,h) {
     let ceil=-1
     let floor=-1

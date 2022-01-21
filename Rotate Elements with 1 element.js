@@ -91,10 +91,10 @@ function runProgram(input) {
  
      if (process.env.USERNAME ==='Rohan') {
        runProgram(`4
-       a b c e
-        f g h i 
-       j k l m 
-       o p q r`);
+       1 2 3 4
+       1 2 3 4
+       1 2 3 4
+       1 2 3 4`);
      } else {
        process.stdin.resume();
        process.stdin.setEncoding("ascii");

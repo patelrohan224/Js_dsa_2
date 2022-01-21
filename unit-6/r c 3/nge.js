@@ -1,20 +1,14 @@
 function runProgram(input) {
     input=input.trim().split("\n")
-    let ar=[]
-    for (let i = 2; i < input.length; i=i+2) {
-        let str=input[i].trim().split(" ").map(Number)
-        fun(str)
-        
+for (let i = 2; i <input.length; i=i+2) {
+    let arr=input[i].trim().split(" ").map(Number)
+        fun(arr)
+}
     }
-  
-    }
-    
-    function fun(array) {
-        // console.log('array:', array)
+    function fun(array) {  
         let rs=[]
         let s=[]
         for (let i = array.length-1; i >=0; i--) {
-            
             while(rs.length!==0 && array[i]>=rs[rs.length-1]){
                 rs.pop()
             }
@@ -26,7 +20,8 @@ function runProgram(input) {
            rs.push(array[i])
         }
         console.log(s.reverse().join(" "));
-    }
+}
+    // pending
     if (process.env.USERNAME === 'Rohan') {
         runProgram(`1
         4
@@ -36,16 +31,16 @@ function runProgram(input) {
         process.stdin.setEncoding("ascii");
         let read = "";
         process.stdin.on("data", function (input) {
-          read += input;
+        read += input;
         });
         process.stdin.on("end", function () {
-          read = read.replace(/\n$/, "");
-          read = read.replace(/\n$/, "");
-          runProgram(read);
+        read = read.replace(/\n$/, "");
+        read = read.replace(/\n$/, "");
+        runProgram(read);
         });
         process.on("SIGINT", function () {
-          read = read.replace(/\n$/, "");
-          runProgram(read);
-          process.exit(0);
+        read = read.replace(/\n$/, "");
+        runProgram(read);
+        process.exit(0);
         });
         }
